@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lower Triangular Matrix</title>
+    <link rel="stylesheet" href="manish.css">
+</head>
+<body>
+    <header>
+        <h1>Upper Triangular Matrix<br>(By Maneesh Shakhwar)</h1>
+    </header>
+
+    <h2>What is a Upper Triangular Matrix?</h2>
+    <p>A Upper triangular matrix is a type of square matrix<br>where all elements below the main diagonal are zero.<br> This can be achieved through Gaussian elimination.</p>
+
+    <h4>Example of Converting a Matrix to Upper Triangular Form</h2>
+    <p>Consider the matrix A:</p>
+    <pre>
+               | 2   3   1 |
+           A = | 4   7   3 |
+               | 6   8   9 |
+    </pre>
+    <hr>
+    <h2><u>Upper Triangular matrix</u></h2>
+
+    <h4>Make the (2,1) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>2</sub> = R<sub>2</sub> - (2) × R<sub>1</sub>
+    
+                              | 2   3   1 |
+            After elimination:| 0   1   1 |
+                              | 6   8   9 |
+    </pre>
+
+    <h4>Make the (3,1) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>3</sub> = R<sub>3</sub> - (3) × R<sub>1</sub>
+        
+                              | 2   3   1 |
+            After elimination:| 0   1   1 |
+                              | 0   -1   6|
+    </pre>
+
+    <h4>Make the (3,2) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>3</sub> = R<sub>3</sub> - (-1) R<sub>2</sub>
+        
+                              | 2   3   1 |
+            After elimination:| 0   1   1 |
+                              | 0   0   7 |
+    </pre>
+    <hr>
+    <h3><u>Final Upper Triangular Matrix (U)</u></h3>
+    <pre>
+                | 2   3   1 |
+            U = | 0   1   1 |
+                | 0   0   7 |
+    </pre>
+</body>
+</html>
