@@ -1,0 +1,28 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: powderblue;
+    color:blue;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+div {
+    text-align: center;
+}
+img {
+    height: 400px;
+    width: 600px;
+    margin:10px;
+}
+li {
+    margin-left: 10px;
+}
+#greet {
+    background-color: powderblue;
+    color: red;
+}
