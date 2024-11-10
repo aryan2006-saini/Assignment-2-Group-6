@@ -9,7 +9,7 @@
     <hr>
     
     <h2>Enter the order (NxN) of the square matrix:</h2>
-    <input type="number" id="matrixSize" min="2" placeholder="Enter n (Ex.- 3)" />
+    <input type="number" id="matrixSize" min="2" placeholder="Enter n (Ex.- 3)" Required>
     <button onclick="generateMatrixInput()">Generate Matrix</button>
     
     <div id="matrixInputContainer" style="display: none;">
@@ -23,90 +23,5 @@
     
     <p><b>Result:</b></p>
     <pre id="result"></pre> <!-- To display the final lower triangular matrix -->
-
-    <!-- <script>
-        function generateMatrixInput() {
-            const matrixSize = parseInt(document.getElementById("matrixSize").value);
-            if (isNaN(matrixSize) || matrixSize < 2) {
-                alert('Please enter a valid size for the matrix (N must be at least 2).');
-                return;
-            }
-            
-            document.getElementById("steps").innerText = '';  // Clear previous steps
-            document.getElementById("result").innerText = '';  // Clear previous result
-            
-            const inputContainer = document.getElementById("matrixInputContainer");
-            inputContainer.style.display = 'block';
-            
-            const matrixInputDiv = document.getElementById("matrixInput");
-            matrixInputDiv.innerHTML = '';  // Clear any previous input
-
-            // Create the grid for the matrix input
-            for (let i = 0; i < matrixSize; i++) {
-                const rowDiv = document.createElement('div');
-                rowDiv.classList.add('matrix-input-row');
-                for (let j = 0; j < matrixSize; j++) {
-                    const input = document.createElement('input');
-                    input.type = 'number';
-                    input.id = `matrix-${i}-${j}`;
-                    rowDiv.appendChild(input);
-                }
-                matrixInputDiv.appendChild(rowDiv);
-            }
-        }
-
-        function performLowerTriangularElimination() {
-            const matrixSize = parseInt(document.getElementById("matrixSize").value);
-            const matrix = [];
-            let steps = '';
-
-            // Collect the matrix values from the input fields
-            for (let i = 0; i < matrixSize; i++) {
-                const row = [];
-                for (let j = 0; j < matrixSize; j++) {
-                    const value = parseFloat(document.getElementById(`matrix-${i}-${j}`).value);
-                    if (isNaN(value)) {
-                        alert('Please enter valid numbers in all matrix cells.');
-                        return;
-                    }
-                    row.push(value);
-                }
-                matrix.push(row);
-            }
-
-            // Step 1: Perform Gaussian elimination to convert to lower triangular form
-            for (let i = 0; i < matrixSize; i++) {
-                // Ensure the pivot is non-zero; if it's zero, swap with a row below
-                if (matrix[i][i] === 0) {
-                    for (let k = i + 1; k < matrixSize; k++) {
-                        if (matrix[k][i] !== 0) {
-                            // Swap rows i and k
-                            let temp = matrix[i];
-                            matrix[i] = matrix[k];
-                            matrix[k] = temp;
-                            break;
-                        }
-                    }
-                }
-
-                // Eliminate the current column above the pivot element
-                for (let j = 0; j < i; j++) {
-                    let factor = matrix[j][i] / matrix[i][i]; // Calculate the factor to eliminate the element
-                    for (let k = 0; k < matrixSize; k++) {
-                        matrix[j][k] -= factor * matrix[i][k];  // Subtract the scaled row
-                    }
-                    steps += `Step ${i + 1}.${j + 1}: Eliminate row ${j + 1} using row ${i + 1}\n${formatMatrix(matrix)}\n\n`;
-                }
-            }
-
-            // Final output
-            document.getElementById("steps").innerText = steps;
-            document.getElementById("result").innerText = formatMatrix(matrix);
-        }
-
-        function formatMatrix(matrix) {
-            return matrix.map(row => row.map(num => num.toFixed(2)).join('\t')).join('\n');
-        }
-    </script> -->
 </body>
 </html>
