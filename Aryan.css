@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    background-color: powderblue; 
+    color:blue; 
+    margin: 0px; 
+    padding: 0px; 
+    text-align: center;
+}
+#matrixInputContainer {
+    display: none;
+}
+button {
+    background:chocolate;
+    color:white;
+    cursor: pointer;
+
+}
+button:hover {
+    background:greenyellow;
+    color: black;
+}
