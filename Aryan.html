@@ -5,23 +5,58 @@
     <link rel="stylesheet" href="Aryan.css">
 </head>
 <body>
-    <h1 class="center-text"><u>Lower Triangular Matrix Calculator</u><br>By Aryan Saini</h1>
+    <header>
+        <h1>Lower Triangular Matrix<br>(By Aryan Saini)</h1>
+    </header>
+
+    <h2>What is a Lower Triangular Matrix?</h2>
+    <p>A Lower triangular matrix is a type of square matrix<br>where all elements above the main diagonal are zero.<br> This can be achieved through Gaussian elimination.</p>
+
+    <h4>Example of Converting a Matrix to Lower Triangular Form</h2>
+    <p>Consider the matrix A:</p>
+    <pre>
+               | 2   3   1 |
+           A = | 4   7   3 |
+               | 6   8   9 |
+    </pre>
     <hr>
+    <h2><u>Lower Triangular Matrix (L)</u></h2>
+
+
+    <h4>Step 1.1: Make the (2,3) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>2</sub> = R<sub>2</sub> - (0.33) × R<sub>1</sub>
     
-    <h2>Enter the order (NxN) of the square matrix:</h2>
-    <input type="number" id="matrixSize" min="2" placeholder="Enter n (Ex.- 3)" Required>
-    <button onclick="generateMatrixInput()">Generate Matrix</button>
-    
-    <div id="matrixInputContainer" style="display: none;">
-        <div id="matrixInput" class="matrix-input"></div>
-        <button onclick="performLowerTriangularElimination()">Lower Triangular Matrix</button>
-    </div>
-    
-    <br><br>
-    <p><b>Steps:</b></p>
-    <pre id="steps"></pre> <!-- To display the steps of the elimination process -->
-    
-    <p><b>Result:</b></p>
-    <pre id="result"></pre> <!-- To display the final lower triangular matrix -->
+                              | 2   3     1 |
+            After elimination:| 2  4.33   0 |
+                              | 6   8     9 |
+    </pre>
+
+    <h4>Step 1.2: Make the (1,3) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>1</sub> = R<sub>1</sub> - (0.111) × R<sub>3</sub>
+        
+                              |1.33 2.11  0 |
+            After elimination:|2    4.33  0 |
+                              |6    8     9 |
+    </pre>
+
+    <h4>Step 1.3: Make the (1,2) element zero using Row Elimination</h4>
+    <pre>
+                R<sub>1</sub> = R<sub>2</sub> - (0.487) R<sub>2</sub>
+        
+                              |0.36  0    0|
+            After elimination:|2    4.33  0|
+                              |6    8     9|
+    </pre>
+    <hr>
+    <hr>
+    <h2>Final Lower Triangular Matrix (U)</h2>
+    <pre>
+                  |0.36  0    0|
+            L =   |2    4.33  0|
+                  |6    8     9|
+    </pre>
 </body>
 </html>
+
