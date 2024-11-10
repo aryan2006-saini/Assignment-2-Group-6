@@ -45,14 +45,10 @@
 <h2> project structure</h2>
 <ul>
   <li> 
-     <a href="merged.html"> index.html</a> The main HTML file that contains the structure of 
+     <a href="Added.html"> Added.html</a> The main HTML file that contains the structure of 
      the web application.
   </li>
   <li>
-     <a href="mstyle.css"> style.css</a> The CSS file for styling the web application.
-  </li>
-  <li>
-     <a href="mscript.js"> index.js</a> The JavaScript file that contains the logic for LDU 
-     factorization and user interactions.
+     <a href="Added.css"> Added.css</a> The CSS file for styling the web application.
   </li>
 </ul>
